@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class Database
 {
     protected function connect()
