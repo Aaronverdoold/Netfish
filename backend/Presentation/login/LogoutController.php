@@ -19,7 +19,7 @@ class LogoutController
             throw new LogoutFailedCustomException("Logout failed: " . $e->getMessage());
         }
 
-        header('Location: ../../../frontend/login/login.html');
+        header('Location: ../../../frontend/login-page/login.html');
         exit;
     }
 

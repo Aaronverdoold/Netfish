@@ -19,6 +19,10 @@ class LoginController extends Database
         $login = new DbalLogin($pdo);
         $result = $login->getUser($user);
 
+        if (!$result) {
+            throw new LoginFailedCustomException("Login failed: Invalid username or password.");
+        }
+
         $admin = $result['is_admin'] === 1;
 
         if ($admin) {
@@ -26,12 +30,6 @@ class LoginController extends Database
         } else {
             header('Location: ../../../frontend/home-page/home.html');
         }
-
-        if (!$result) {
-            throw new LoginFailedCustomException("Login failed: Invalid username or password.");
-        }
-
-        return "Login successful. Welcome, " . htmlspecialchars($result['username']) . "!";
     }
 
 }

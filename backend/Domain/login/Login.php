@@ -8,6 +8,9 @@ require_once __DIR__ . '/../../Presentation/login/LoginController.php';
 use Domain\User;
 use CustomExceptions\LoginFailedCustomException;
 
+$username = $_POST['username'] ?? null;
+$password = $_POST['password'] ?? null;
+
 $user = new User(
     null,
     $_POST['username'],
@@ -16,14 +19,13 @@ $user = new User(
     0,
 );
 
-$user->username = $_POST['username'];
-$user->password = $_POST['password'];
+$user->username = $username;
+$user->password = $password;
 
 $controller = new LoginController();
 
 try {
-    $message = $controller->login($user);
-    echo $message;
+    $controller->login($user);
 
 } catch (LoginFailedCustomException $e) {
     echo $e->getMessage();
