@@ -1,9 +1,8 @@
-/* frontend/video-page/video.module.css */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #000;
-    color: #fff; /* changed to white */
+    color: #fff;
 }
 
 .container {
@@ -24,7 +23,7 @@ header {
 }
 
 nav a {
-    color: black; /* ensure links are white */
+    color: black;
     text-decoration: none;
     margin-left: 1rem;
     padding: 0.35rem 0.6rem;
@@ -35,7 +34,7 @@ nav a:first-child { margin-left: 0; }
 
 nav a:hover,
 nav a:focus {
-    background: rgba(255,255,255,0.08); /* lighter contrast on hover */
+    background: rgba(255,255,255,0.08);
     outline: none;
 }
 

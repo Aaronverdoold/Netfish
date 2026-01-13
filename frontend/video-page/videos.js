@@ -1,7 +1,6 @@
 fetch("/Netfish/backend/Domain/videos/ListVideos.php")
   .then(res => res.json())
   .then(videos => {
-      console.log(videos); // <-- Add this to see what the JS receives
 
       const container = document.getElementById("videos");
 
