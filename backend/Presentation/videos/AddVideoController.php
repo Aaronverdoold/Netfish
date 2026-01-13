@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace videos;
 
 require_once __DIR__ . "/../../Database/dbconnect.php";

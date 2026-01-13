@@ -23,6 +23,10 @@ class LoginController extends Database
             throw new LoginFailedCustomException("Login failed: Invalid username or password.");
         }
 
+        session_start();
+        $_SESSION['username'] = $result['username'];
+        $_SESSION['is_admin'] = $result['is_admin'];
+
         $admin = $result['is_admin'] === 1;
 
         if ($admin) {
