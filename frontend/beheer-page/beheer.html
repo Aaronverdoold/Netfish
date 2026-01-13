@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Beheer</title>
+    <link rel="stylesheet" href="beheer.module.css">
 </head>
 <body>
+
+<header>
+    <div class="container header-container">
+        <nav>
+            <a href="../home-page/home.html">Home</a>
+            <a href="../video-page/video.html">Video's</a>
+            <span id="user-links">
+                <a href="../login-page/login.html">Login</a>
+            </span>
+        </nav>
+    </div>
+</header>
+
+<form action="../../backend/Domain/videos/Videos.php" method="post">
+    <label for="title">Titel:</label>
+    <input type="text" id="title" name="title" required><br><br>
+
+    <label for="url">Video URL:</label>
+    <input type="text" id="url" name="url" placeholder="https://..." required><br><br>
+
+    <label for="year">Jaar:</label>
+    <input type="text" id="year" name="year" required><br><br>
+
+    <label for="description">Beschrijving:</label>
+    <input type="text" id="description" name="description" required><br><br>
+
+    <button type="submit">Toevoegen</button>
+
+</form>
+
+<script src="../home-page/navbar.js"></script>
 
 </body>
 </html>
